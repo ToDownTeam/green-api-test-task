@@ -1,8 +1,9 @@
-import React from 'react';
-import {AuthLayout} from "../components/organisms/AuthLayout";
-import AuthForm from "../components/molecoles/AuthForm";
+import React, {useContext, useEffect} from 'react';
+import {AuthLayout} from "../components/organisms/authLayout";
+import AuthForm from "../components/molecoles/authForm";
 
 const Auth = () => {
+
   return (
     <AuthLayout>
       <AuthForm/>
