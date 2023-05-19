@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route} from "react-router-dom";
 import Auth from "./pages/auth";
 import Chat from "./pages/chat";
 import {ChatLayout} from "./components/organisms/chatLayout";
+import './styles/styles.scss';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem('token'));

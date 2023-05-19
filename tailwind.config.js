@@ -1,13 +1,19 @@
+const plugin = require("tailwindcss/plugin");
+
 /** @type {import('tailwindcss').Config} */
 // @ts-ignore
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx,html,css}"],
-  theme: {
+    content: ["./src/**/*.{html,tsx}"],
+    theme: {
     extend: {},
     fontFamily:{
       icons:"MoreSpeedFontFamily"
     }
   },
-  plugins: [],
+  plugins: [
+      plugin(({ addBase, theme, addVariant }) => {
+          // addBase(baseOverrides(theme));
+      }),
+  ],
 }
 
