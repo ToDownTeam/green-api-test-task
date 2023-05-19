@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @import "icon";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@layer components {
+  html,
+  body {
+    @apply text-white;
+    @screen sm {
+      @apply text-sm;
+    }
+    @screen md {
+      @apply text-base;
+    }
+  }
+
+  * {
+    @apply box-border;
+  }
+
+  @font-face {
+    font-family: "MoreSpeedFontFamily";
+    src: url("../assets/fonts/icon/icomoon.eot?735vkh");
+    src: url("../assets/fonts/icon/icomoon.eot?735vkh#iefix") format("embedded-opentype"),
+    url("../assets/fonts/icon/icomoon.ttf?735vkh") format("truetype"), url("../assets/fonts/icon/icomoon.woff?735vkh") format("woff"),
+    url("../assets/fonts/icon/icomoon.svg?735vkh#icomoon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  .container {
+    @apply px-4 sm:px-[7.5vw] pt-4 sm:pt-[10vh];
+  }
+
+  .main {
+    @apply h-full w-full;
+  }
+
+  .leftPanel {
+    @apply h-full w-14  flex flex-col justify-between items-center relative;
+    @screen sm {
+      @apply w-24 border-r border-grayDark overflow-hidden;
+    }
+  }
+
+  .scroll-hide {
+    &::-webkit-scrollbar {
+      @apply w-[0.625rem];
+    }
+
+    &::-webkit-scrollbar-track {
+      -webkit-border-radius: 0.625rem;
+      @apply rounded-[0.625rem];
+    }
+
+    &::-webkit-scrollbar-thumb {
+      -webkit-border-radius: 0.625rem;
+      @apply rounded-[0.625rem];
+    }
+  }
+}

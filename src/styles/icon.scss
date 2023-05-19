@@ -1,0 +1,18 @@
+.icon {
+  @apply font-icons not-italic font-normal normal-case leading-none text-white inline-flex justify-center;
+}
+
+// icons content
+$icons: (
+        "more-vertical":"\e900",
+        "enter":"\ea13",
+        "mail":"\ea86"
+);
+
+// loop, to style icon links
+@each $name, $icon in $icons {
+  // selector based on id name
+  [id*="#{$name}"]:before {
+    content: $icon;
+  }
+}
