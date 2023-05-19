@@ -1,6 +1,6 @@
 import React from 'react';
 import {useForm, UseFormReturn, SubmitHandler, DefaultValues, FieldValues, FieldError} from "react-hook-form";
-import {authValidateSchema} from "../../lib/validate/authValidateSchema";
+import {authValidateSchema} from "../../lib/helpers/validate/authValidateSchema";
 import {yupResolver} from "@hookform/resolvers/yup";
 import clsx from "clsx";
 import {Button} from "../atoms/button";
@@ -24,8 +24,8 @@ const AuthForm = <TFormValues extends Record<string, unknown> = Record<string, u
            placeholder={"Id Instance"} className={"placeholder:text-gray-700 "}/>
     <Input register={register("idTokenInstance")} showMessage={true} error={errors?.idTokenInstance as FieldError}
            placeholder={"Id Token Instance"} className={"placeholder:text-gray-700 "}></Input>
-    <Button onClick={onSubmit} className={"m-auto relative text-black items-start bg-emerald-200 py-2 px-8 rounded-xl"}>Submit<Icon
-      className={"absolute right-4 pt-1 text-black justify-center items-center "} name={"enter"}/></Button>
+    <Button onClick={onSubmit} className={"m-auto relative text-black items-start bg-emerald-200 py-2 pl-8 pr-10 rounded-xl"}>Submit<Icon
+      className={"absolute right-6 pt-1 text-black justify-center items-center "} name={"enter"}/></Button>
   </form>;
 };
 
