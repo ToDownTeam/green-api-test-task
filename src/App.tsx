@@ -3,9 +3,9 @@ import Auth from "./pages/auth";
 
 function App() {
   return (
-      <div className="w-full h-screen flex flex-cols text-center">
-          <Auth />
-      </div>
+    <div className="w-full h-screen flex flex-cols text-center">
+      <Auth/>
+    </div>
   );
 }
 
