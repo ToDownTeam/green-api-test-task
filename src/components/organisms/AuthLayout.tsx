@@ -1,8 +1,7 @@
 import React, {FC} from "react";
 import clsx from "clsx";
 
-// @ts-ignore
-import background from "/Users/tigrangrigoryan.itgmail.com/Desktop/green-api-test-task/src/assets/images/bg.jpg"
+const background =  require("../../assets/images/bg.jpg");
 
 interface LayoutProps {
   mainClassName?: string;
